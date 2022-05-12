@@ -1,0 +1,95 @@
+<app-topbar></app-topbar>
+<app-sidebar></app-sidebar>
+<div class="container d-flex justify-content-center table-box">
+  <form action="#" class="form" (ngSubmit)="userdata()" style="margin-top:110px;">
+    <div class="progressbar">
+      <div class="progress" id="progress"></div>
+      <div class="form-step form-step-active">
+        <h1 style="margin-top: -35px; text-align: center;">User Creation</h1>
+        <div class="input-group">
+          <label for="personaldetails">Name</label>
+          <input type="text" name="fullName"[(ngModel)]="user.name" id="personaldetails" placeholder="Enter User's name" />
+        </div>
+        <div class="input-group">
+          <label for="personaldetails">Mail Address</label>
+          <input type="email" name="email" [(ngModel)]="user.email" id="personaldetails"
+            placeholder="Enter User's mail address" />
+        </div>
+        <div class="input-group">
+          <label for="personaldetails">User Name</label>
+          <input type="text" name="userName"[(ngModel)]="user.userName" id="personaldetails" placeholder="Enter User's user name" />
+        </div>
+        <div class="input-group">
+          <label for="personaldetails">Password</label>
+          <input type="password" name="password" [(ngModel)]="user.password" id="personaldetails" placeholder="Enter User's password" />
+        </div>
+        <div class="input-group">
+          <label for="personaldetails">Gender</label>
+          <select id="cars" name="genderId" [(ngModel)]="user.gender">
+            <option value="volvo">Select Gender</option>
+            <option *ngFor="let item of Gender" value={{item.id}}>{{item.gender}}</option>
+            <!-- <option value="volvo">Male</option>
+                  <option value="saab">Female</option>
+                  <option value="fiat">Others</option> -->
+
+          </select>
+        </div>
+        <div class="field">
+          <div class="label">
+            Mobile Number
+          </div>
+          <!-- <div class="mobilenum1">
+            <select style="width:5rem" name="mobileNumberId"[(ngModel)]="user.mobileNumberId">
+              <option value="volvo">Select Country Code</option>
+              <option *ngFor="let item of Mobilenumber" value={{item.id}}>{{item.number}}</option> -->
+              <!-- <option>+91</option>
+                   <option>+44</option>
+                   <option>+213</option>
+                   <option>+1</option>
+                   <option>+55</option> -->
+
+            <!-- </select>
+          </div> -->
+          <div class="mobilenum">
+            <input type="number" name="mobileNumber" [(ngModel)]="user.mobileNo"id="personaldetails" placeholder="Enter User's mobile number">
+          </div>
+        </div>
+        <br><br>
+        <div class="input-group">
+          <label for="personaldetails">Organization</label>
+          <select id="cars" name="organizationId" [(ngModel)]="user.organization">
+            <option value="volvo">Select Organization</option>
+            <option *ngFor="let item of Organization" value={{item.id}}>{{item.organizationName}}</option>
+            <!-- <option value="volvo">Development</option>
+                  <option value="saab">Testing</option>
+                  <option value="fiat">UI/UX</option> -->
+          </select>
+        </div>
+        <div class="input-group">
+          <label for="personaldetails">Designation</label>
+          <select id="cars" name="designationId" [(ngModel)]="user.designation">
+            <option value="volvo">Select Designation</option>
+            <option *ngFor="let item of Designation" value={{item.id}}>{{item.designationName}}</option>
+            <!-- <option value="volvo">PM</option>
+                  <option value="saab">TL</option>
+                  <option value="fiat">SSE</option> -->
+          </select>
+        </div>
+        <div class="input-group">
+          <label for="personaldetails">Reporting Person</label>
+          <input type="text" name="reportingPerson" [(ngModel)]="user.reporting_Person" id="personaldetails"
+            placeholder="Enter reporting person's Username" />
+        </div>
+        <div class="row btns-group1">  
+          <!-- <div class="col-sm-offset-2 col-sm-10">
+            <div class="mt-2 text-right">
+              <button class=" custom-btn btn-1 btn-2 btns-group1" type="submit">Submit</button>
+            </div>
+          </div>        -->
+          <a (click) = "userdata()" routerLink="/search" class="btn">Submit</a>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<!-- <a (click) = "userdata()" routerLink="/search" class="btn">Submit</a> -->
