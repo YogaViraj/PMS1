@@ -8,7 +8,7 @@
         <h1 style="margin-top: -35px; text-align: center;">User Creation</h1>
         <div class="input-group">
           <label for="personaldetails">Name</label>
-          <input type="text" name="fullName"[(ngModel)]="user.name" id="personaldetails" placeholder="Enter User's name" />
+          <input type="text" name="name"[(ngModel)]="user.name" id="personaldetails" placeholder="Enter User's name" />
         </div>
         <div class="input-group">
           <label for="personaldetails">Mail Address</label>
@@ -38,20 +38,20 @@
           <div class="label">
             Mobile Number
           </div>
-          <!-- <div class="mobilenum1">
+          <div class="mobilenum1">
             <select style="width:5rem" name="mobileNumberId"[(ngModel)]="user.mobileNumberId">
               <option value="volvo">Select Country Code</option>
-              <option *ngFor="let item of Mobilenumber" value={{item.id}}>{{item.number}}</option> -->
-              <!-- <option>+91</option>
+              <option *ngFor="let item of Mobilenumber" value={{item.id}}>{{item.number}}</option>
+              <option>+91</option>
                    <option>+44</option>
                    <option>+213</option>
                    <option>+1</option>
-                   <option>+55</option> -->
+                   <option>+55</option>
 
-            <!-- </select>
-          </div> -->
+            </select>
+          </div>
           <div class="mobilenum">
-            <input type="number" name="mobileNumber" [(ngModel)]="user.mobileNo"id="personaldetails" placeholder="Enter User's mobile number">
+            <input type="text" name="mobileNumber" [(ngModel)]="user.mobileNo"id="personaldetails" placeholder="Enter User's mobile number">
           </div>
         </div>
         <br><br>

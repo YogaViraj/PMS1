@@ -34,7 +34,7 @@ user : any= {
   userName: '',
   password:'',
   gender: 0,
-  mobileNo:0,
+  mobileNo:'',
   organization: 0,
   designation: 0,
   reporting_Person:'' ,

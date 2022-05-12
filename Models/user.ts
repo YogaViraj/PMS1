@@ -36,7 +36,7 @@ export interface User {
     userName: string;
     password: string;
     gender: number;
-    mobileNo: number;
+    mobileNo: string;
     organization: number;
     designation: number;
     reporting_Person: string;

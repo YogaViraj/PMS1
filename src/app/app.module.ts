@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { FormsModule } from '@angular/forms';
 import { ViewprofieComponent } from './viewprofie/viewprofie.component';
+import { PersonaldetailsComponent } from './personaldetails/personaldetails.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ViewprofieComponent } from './viewprofie/viewprofie.component';
     CardComponent,
     Card11Component,
     ViewprofieComponent,
+    PersonaldetailsComponent,
   ],
   imports: [
     BrowserModule,
